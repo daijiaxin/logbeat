@@ -1,0 +1,13 @@
+---
+# logbeat config
+# input
+inputs:
+  - path: 1.log
+    type: file
+  - broker: [172.18.2.223:6667, 172.18.2.253:6667, 172.18.2.254:6667]
+    type: kafka
+    topic: juhe-log
+    groupId: logbeat
+# output
+outputs:
+  - type: stdout
