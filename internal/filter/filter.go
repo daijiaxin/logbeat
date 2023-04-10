@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-var FilterChan = make(chan map[string]interface{}, 1000)
+var FilterChan = make(chan map[string]interface{}, 10000)
 
 func Start(num int) {
 	for {
